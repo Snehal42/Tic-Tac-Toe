@@ -30,22 +30,23 @@ h1 {
 }
 
 .game {
-    width: 60vmin;
-    height: 60vmin;
+    /* width: 60vmin;
+    height: 60vmin; */
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    /* gap: 1.5vmin; */
     background: rgba(255, 255, 255, 0.1);
     border-radius: 2rem;
+    padding: 1rem;
     backdrop-filter: blur(10px);
     box-shadow: 0 0 2rem rgba(0, 0, 0, 0.3);
-    max-width: 500px;
 }
 
 .box {
-    width: 90%;
-    height: 90%;
+    /* width: 100%;
+    height: 100%; */
     background: rgba(255, 255, 255, 0.6);
-    border: 2px solid rgba(255, 255, 255, 0.4);
+    /* border: 2px solid rgba(255, 255, 255, 0.4); */
     border-radius: 1rem;
     font-size: 7vmin;
     color: #ff416c;
@@ -53,7 +54,7 @@ h1 {
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    transition: transform 0.2s ease, background-color 0.2s ease; 
+    transition: transform 0.2s ease, background-color 0.2s ease;
 }
 
 .box:hover {
@@ -70,6 +71,7 @@ button {
     background: #2c3e50;
     color: #ecf0f1;
     cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 button:hover {
@@ -83,7 +85,6 @@ button:hover {
 }
 
 .msg-container {
-    height: 100vmin;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -94,58 +95,4 @@ button:hover {
 
 .hide {
     display: none;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    h1 {
-        font-size: 2.2rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .game {
-        width: 90vmin;
-        height: 90vmin;
-        grid-template-columns: repeat(3, 1fr);
-    }
-
-    .box {
-        width: 28vmin;
-        height: 28vmin;
-        font-size: 10vmin;
-    }
-
-    button {
-        font-size: 1rem;
-        padding: 0.8rem 1.5rem;
-        margin: 0.8rem;
-    }
-
-    #msg {
-        font-size: 1.8rem;
-    }
-
-    .msg-container {
-        gap: 1.5rem;
-        margin-top: 1rem;
-    }
-}
-
-@media (max-width: 480px) {
-    h1 {
-        font-size: 1.8rem;
-    }
-
-    .box {
-        font-size: 9vmin;
-    }
-
-    button {
-        font-size: 0.9rem;
-        padding: 0.6rem 1.2rem;
-    }
-
-    #msg {
-        font-size: 1.5rem;
-    }
 }
